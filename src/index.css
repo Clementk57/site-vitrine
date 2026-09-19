@@ -5,7 +5,7 @@
   --canvas-deep: #ebece7;
   --ink: #171918;
   --ink-soft: #515550;
-  --ink-faint: #777b75;
+  --ink-faint: #62665f;
   --line: #cfd1ca;
   --line-dark: #313530;
   --accent: #3150bf;
@@ -37,7 +37,6 @@ html {
 
 body {
   margin: 0;
-  min-width: 20rem;
   background: var(--canvas);
 }
 
@@ -933,6 +932,7 @@ button:focus-visible {
     background: var(--canvas);
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
     transform: translateY(-0.5rem);
     transition: opacity 180ms ease, transform 180ms ease;
   }
@@ -942,6 +942,7 @@ button:focus-visible {
     padding-bottom: 0.85rem;
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
     transform: translateY(0);
   }
 
