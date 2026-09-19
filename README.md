@@ -18,6 +18,23 @@ npm run build
 npm run lint
 ```
 
+## Déploiement Docker / Azure
+
+Le projet comprend un conteneur de production : il construit l’application Vite puis la sert via Nginx sur le port `80`.
+
+```bash
+docker build -t clement-portfolio .
+docker run --rm -p 8080:80 clement-portfolio
+```
+
+Pour le publier dans Azure Container Apps après authentification Azure :
+
+```bash
+az containerapp up --name clement-portfolio --resource-group <groupe-ressources> --location westeurope --source . --ingress external --target-port 80
+```
+
+Azure construit le `Dockerfile`, expose le portfolio publiquement et retourne son URL. Remplacez `<groupe-ressources>` par un groupe Azure existant ou à créer.
+
 ## Mettre à jour les coordonnées
 
 Les valeurs de contact sont centralisées dans `src/data/profile.ts` :
