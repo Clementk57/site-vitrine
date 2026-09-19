@@ -1,32 +1,37 @@
-# React + TypeScript + Vite
+# Portfolio de Clément
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfolio personnel de Clément, Software Developer spécialisé en C#, .NET et intelligence artificielle.
 
-Currently, two official plugins are available:
+Le site est une landing page statique construite avec React, TypeScript, Vite et Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Démarrer le projet
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scripts utiles
 
-## Expanding the Oxlint configuration
+```bash
+npm run build
+npm run lint
+```
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Mettre à jour les coordonnées
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
+Les valeurs de contact sont centralisées dans `src/data/profile.ts` :
+
+```ts
+contact: {
+  email: '',
+  github: '',
+  linkedin: '',
 }
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Ajoutez seulement des adresses ou URL publiques vérifiées. Tant qu’une valeur est vide, aucun lien cassé n’est affiché dans l’interface.
+
+## Contenu
+
+Les expériences, projets et technologies sont regroupés dans `src/data/portfolio.ts`, afin de permettre des mises à jour sans modifier les composants de présentation.
