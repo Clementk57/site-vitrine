@@ -4,11 +4,21 @@ export type ContactLink = {
 }
 
 export type Experience = {
+  id: string
   period: string
   title: string
   context: string
   summary: string
   themes: readonly string[]
+  current?: boolean
+}
+
+export type Education = {
+  degree: string
+  period: string
+  context: string
+  description: string
+  note: string
 }
 
 export type Project = {

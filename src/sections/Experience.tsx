@@ -7,27 +7,27 @@ export function Experience() {
         <div className="section-heading section-heading--split">
           <p className="section-label">03 — Expérience</p>
           <div>
-            <h2>Une expérience construite dans la durée.</h2>
+            <h2>Du terrain, à chaque étape.</h2>
             <p>
-              Du développement quotidien à la fiabilité des déploiements, avec une attention
-              constante aux contraintes d’un environnement professionnel.
+              Aujourd’hui à temps partiel au Luxembourg, après une année à temps plein.
+              Un parcours professionnel construit en parallèle de mes études.
             </p>
           </div>
         </div>
 
-        <ol className="experience-timeline">
+        <ol className="experience-timeline" aria-label="Expériences, de la plus récente à la plus ancienne">
           {experiences.map((experience) => (
-            <li className="experience-item" key={experience.title}>
+            <li className="experience-item" data-current={experience.current} key={experience.id}>
               <div className="experience-item__period">{experience.period}</div>
               <div className="experience-item__content">
                 <p className="experience-item__context">{experience.context}</p>
                 <h3>{experience.title}</h3>
                 <p>{experience.summary}</p>
-                <ul aria-label={`Compétences associées à ${experience.title}`} className="tag-list">
+                {experience.themes.length > 0 && <ul aria-label={`Compétences associées à ${experience.title}`} className="tag-list">
                   {experience.themes.map((theme) => (
                     <li key={theme}>{theme}</li>
                   ))}
-                </ul>
+                </ul>}
               </div>
             </li>
           ))}

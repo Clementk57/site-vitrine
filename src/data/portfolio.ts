@@ -1,21 +1,66 @@
-import type { Experience, Project, StackGroup } from '../types/portfolio'
+import type { Education, Experience, Project, StackGroup } from '../types/portfolio'
 
 export const experiences: readonly Experience[] = [
   {
-    period: '4 ans',
-    title: 'Parcours en alternance',
-    context: 'Développement logiciel · applications métier',
+    id: 'current-cdd',
+    period: 'Aujourd’hui',
+    title: 'Développeur logiciel',
+    context: 'CDD à temps partiel · Luxembourg',
     summary:
-      'Une première expérience longue au contact de produits utilisés au quotidien : maintenance, évolution fonctionnelle et construction de bases techniques durables.',
-    themes: ['C#', '.NET', 'APIs', 'SQL', 'Testing'],
+      'Je poursuis mon activité de développement logiciel au Luxembourg, à temps partiel, en parallèle de mon Master Informatique, parcours Intelligence Artificielle, à Avignon Université.',
+    themes: ['C# / .NET', 'Applications métier', 'IA appliquée'],
+    current: true,
   },
   {
-    period: 'Aujourd’hui',
-    title: 'Software Developer · Luxembourg',
-    context: 'CDD · logiciels d’entreprise',
+    id: 'full-time-cdd',
+    period: '1 an',
+    title: 'Développeur logiciel',
+    context: 'CDD à temps plein · Luxembourg',
     summary:
-      'Conception et évolution de solutions professionnelles où l’architecture, l’automatisation, la fiabilité et la compréhension du métier comptent autant que le code.',
-    themes: ['ASP.NET Core', 'CI/CD', 'Observabilité', 'IA appliquée'],
+      'Une année consacrée à plein temps au développement logiciel en entreprise, après le bachelor et avant le passage à temps partiel.',
+    themes: [],
+  },
+  {
+    id: 'bachelor-cdd',
+    period: 'Pendant le bachelor',
+    title: 'Développement logiciel en CDD',
+    context: 'CDD · Luxembourg',
+    summary:
+      'Poursuite du parcours professionnel sous contrat à durée déterminée, en parallèle de la préparation du bachelor.',
+    themes: [],
+  },
+  {
+    id: 'bts-apprenticeship',
+    period: '2 ans',
+    title: 'Développeur en apprentissage',
+    context: 'Alternance pendant le BTS · Luxembourg',
+    summary:
+      'Deux années d’apprentissage en entreprise au Luxembourg pendant le BTS : les premiers pas professionnels en développement logiciel, au contact d’applications métier.',
+    themes: [],
+  },
+]
+
+export const education: readonly Education[] = [
+  {
+    degree: 'Master Informatique',
+    period: '2026 — actuellement',
+    context: 'Avignon Université',
+    description: 'Parcours Intelligence Artificielle',
+    note: 'En parallèle d’un CDD à temps partiel au Luxembourg.',
+  },
+  {
+    degree: 'Bachelor',
+    period: 'Après le BTS',
+    context: 'Études & activité professionnelle',
+    description: 'Formation suivie en parallèle d’un CDD.',
+    note: 'Activité professionnelle au Luxembourg.',
+  },
+  {
+    degree: 'BTS',
+    period: '2 ans',
+    context: 'Formation en alternance',
+    description: 'Deux années sous contrat d’apprentissage.',
+    note: 'Expérience en entreprise au Luxembourg.',
   },
 ]
 
@@ -69,7 +114,7 @@ export const projects: readonly Project[] = [
 export const stackGroups: readonly StackGroup[] = [
   {
     name: 'Backend',
-    technologies: ['.NET', 'ASP.NET Core', 'Entity Framework Core', 'MediatR'],
+    technologies: ['C#', '.NET', 'ASP.NET Core', 'Entity Framework Core', 'MediatR', 'Hangfire'],
   },
   {
     name: 'AI',
@@ -85,7 +130,7 @@ export const stackGroups: readonly StackGroup[] = [
   },
   {
     name: 'DevOps',
-    technologies: ['Azure DevOps', 'CI/CD', 'Git', 'Linux'],
+    technologies: ['Docker', 'Azure DevOps', 'CI/CD', 'Git', 'Linux'],
   },
   {
     name: 'Quality',

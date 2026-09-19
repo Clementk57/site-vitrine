@@ -4,7 +4,7 @@ export function About() {
       <div className="section__frame about">
         <div className="section-heading">
           <p className="section-label">02 — À propos</p>
-          <h2>Une pratique tournée vers les produits qui durent.</h2>
+          <h2>Le logiciel, côté métier.</h2>
         </div>
 
         <div className="about__body">
@@ -14,9 +14,9 @@ export function About() {
           </p>
           <div className="about__copy">
             <p>
-              Mon parcours a commencé en alternance avant de se poursuivre au Luxembourg. J’y
-              contribue à des applications professionnelles en conciliant qualité du code,
-              compréhension des usages et sens de la maintenance.
+              J’ai commencé par deux ans d’apprentissage au Luxembourg pendant mon BTS,
+              puis travaillé en CDD pendant mon bachelor. Après un an de CDD à temps plein,
+              je poursuis aujourd’hui cette activité à temps partiel.
             </p>
             <p>
               En parallèle, je poursuis un Master Informatique — parcours Intelligence
