@@ -8,7 +8,7 @@ export const profile = {
   contact: {
     email: '',
     github: '',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/clement-kontzler-dev/',
   },
 } as const
 

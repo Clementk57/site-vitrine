@@ -64,6 +64,13 @@ export const education: readonly Education[] = [
   },
 ]
 
+export const coreTechnologies = [
+  { name: 'C#', field: 'Langage principal' },
+  { name: '.NET', field: 'Backend & API' },
+  { name: 'React', field: 'Interfaces web' },
+  { name: 'Docker', field: 'Conteneurs' },
+] as const
+
 export const projects: readonly Project[] = [
   {
     number: '01',
@@ -74,7 +81,7 @@ export const projects: readonly Project[] = [
     contribution:
       'Knowledge bases, import de documents, recherche sémantique, conversations contextualisées, streaming de réponses et extraction de données structurées.',
     technologies: ['C#', '.NET', 'Semantic Kernel', 'RAG', 'LLM', 'Hangfire'],
-    note: 'Travail présenté sans nom de produit ni données internes.',
+    note: 'Contribution · développement .NET & intégration IA',
   },
   {
     number: '02',
@@ -85,7 +92,7 @@ export const projects: readonly Project[] = [
     contribution:
       'Évolution d’API, génération de documents, orchestration de traitements asynchrones, permissions, tests et maintenance fonctionnelle.',
     technologies: ['.NET', 'EF Core', 'MediatR', 'SQL', 'Azure DevOps'],
-    note: 'Périmètre fonctionnel volontairement généralisé.',
+    note: 'Contribution · développement & maintenance évolutive',
   },
   {
     number: '03',
@@ -96,7 +103,7 @@ export const projects: readonly Project[] = [
     contribution:
       'Investigation d’incidents, télémétrie, analyse de performances, déploiements, migration de serveurs et amélioration des pipelines.',
     technologies: ['Linux', 'CI/CD', 'REST APIs', 'Testing', 'Performance'],
-    note: 'Aucun client ni élément d’infrastructure n’est divulgué.',
+    note: 'Contribution · maintenance & exploitation',
   },
   {
     number: '04',
@@ -107,7 +114,7 @@ export const projects: readonly Project[] = [
     contribution:
       'Veille technologique, cadrage de cas d’usage et réflexion sur l’intégration responsable de systèmes agentiques.',
     technologies: ['AI Agents', 'RAG', 'Architecture', 'Processus métier'],
-    note: 'Travail de recherche et d’exploration, non présenté comme un produit déployé.',
+    note: 'Recherche universitaire · exploration, non déployée',
   },
 ]
 

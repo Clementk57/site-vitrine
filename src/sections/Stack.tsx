@@ -6,18 +6,19 @@ export function Stack() {
       <div className="section__frame stack">
         <div className="section-heading">
           <p className="section-label">05 — Stack</p>
-          <h2>Des outils choisis pour servir le problème.</h2>
+          <h2>Du code au déploiement.</h2>
         </div>
 
         <div className="stack__layout">
           <div className="stack__featured">
-            <p className="stack__featured-label">Technologie principale</p>
+            <p className="stack__featured-label">Mon socle technique</p>
             <p aria-label="C sharp" className="stack__featured-mark">
               C#
             </p>
+            <p className="stack__featured-title">.NET, au quotidien.</p>
             <p>
-              Un écosystème que j’apprécie pour la solidité de son outillage, la lisibilité de ses
-              abstractions et son efficacité dans les applications métier.
+              APIs, logique métier, traitements asynchrones et intégration d’IA.
+              React pour les interfaces, Docker pour les environnements conteneurisés.
             </p>
           </div>
 

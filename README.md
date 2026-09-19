@@ -34,4 +34,6 @@ Ajoutez seulement des adresses ou URL publiques vérifiées. Tant qu’une valeu
 
 ## Contenu
 
-Les expériences, projets et technologies sont regroupés dans `src/data/portfolio.ts`, afin de permettre des mises à jour sans modifier les composants de présentation.
+Les expériences, formations, projets et technologies sont regroupés dans `src/data/portfolio.ts`, afin de permettre des mises à jour sans modifier les composants de présentation. Les expériences et formations sont présentées de la plus récente à la plus ancienne.
+
+Le premier projet est accompagné d’un schéma de principe du traitement documentaire ; il ne s’agit pas d’une capture d’un produit d’entreprise. Les contributions techniques de chaque projet sont accessibles via des panneaux dépliables, utilisables au clavier.

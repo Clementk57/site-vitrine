@@ -1,24 +1,25 @@
 import { projects } from '../data/portfolio'
+import { DocumentFlow } from '../components/DocumentFlow'
 
 export function Projects() {
   return (
     <section className="section section--projects" id="projects">
       <div className="section__frame">
         <div className="section-heading section-heading--split">
-          <p className="section-label">04 — Selected work</p>
+          <p className="section-label">04 — Projets sélectionnés</p>
           <div>
-            <h2>Projets sélectionnés.</h2>
+            <h2>Des sujets concrets.<br />Des choix techniques.</h2>
             <p>
-              Des sujets techniques menés dans des contextes professionnels ou universitaires,
-              présentés sans compromettre la confidentialité des environnements concernés.
+              Quatre contributions, de l’application métier à la recherche universitaire.
+              Les projets d’entreprise sont présentés sous des noms génériques.
             </p>
           </div>
         </div>
 
         <ol className="projects-list">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <li key={project.number}>
-              <article className="project">
+              <article className={`project${index === 0 ? ' project--featured' : ''}`}>
                 <p aria-hidden="true" className="project__number">
                   {project.number}
                 </p>
@@ -27,13 +28,17 @@ export function Projects() {
                   <h3>{project.title}</h3>
                   <p className="project__description">{project.description}</p>
                 </div>
+                {index === 0 && <DocumentFlow />}
                 <div className="project__detail">
-                  <p>{project.contribution}</p>
                   <ul aria-label={`Technologies utilisées pour ${project.title}`} className="tag-list">
                     {project.technologies.map((technology) => (
                       <li key={technology}>{technology}</li>
                     ))}
                   </ul>
+                  <details className="project__disclosure">
+                    <summary>Contributions techniques<span className="project__toggle" aria-hidden="true">+</span></summary>
+                    <p>{project.contribution}</p>
+                  </details>
                   <p className="project__note">{project.note}</p>
                 </div>
               </article>

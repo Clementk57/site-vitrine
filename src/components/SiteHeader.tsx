@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import { CloseIcon, MenuIcon } from './icons'
 
@@ -13,14 +13,23 @@ const navigationItems = [
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuButton = useRef<HTMLButtonElement>(null)
 
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <header className="site-header">
+    <header className="site-header" onKeyDown={(event) => {
+      if (event.key === 'Escape' && isMenuOpen) {
+        closeMenu()
+        menuButton.current?.focus()
+      }
+    }} onBlur={(event) => {
+      if (!event.currentTarget.contains(event.relatedTarget)) closeMenu()
+    }}>
       <div className="site-header__inner">
-        <a className="wordmark" href="#top" onClick={closeMenu} aria-label="Retour en haut de la page">
-          C.
+        <a className="wordmark" href="#top" onClick={closeMenu} aria-label="Clément — retour en haut de la page">
+          <span className="wordmark__monogram" aria-hidden="true">C.</span>
+          <span className="wordmark__name">Clément</span>
         </a>
 
         <button
@@ -30,6 +39,7 @@ export function SiteHeader() {
           className="menu-toggle"
           onClick={() => setIsMenuOpen((open) => !open)}
           type="button"
+          ref={menuButton}
         >
           {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
@@ -47,10 +57,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a className="header-status" href="#contact">
-          <span aria-hidden="true"></span>
-          Disponible à l’échange
-        </a>
+        <span className="header-location">Luxembourg / France</span>
       </div>
     </header>
   )
