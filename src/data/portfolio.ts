@@ -1,4 +1,4 @@
-import type { Education, Experience, Project, StackGroup } from '../types/portfolio'
+import type { Certification, Education, Experience, Project, StackGroup } from '../types/portfolio'
 
 export const experiences: readonly Experience[] = [
   {
@@ -70,6 +70,31 @@ export const coreTechnologies = [
   { name: 'React', field: 'Interfaces web' },
   { name: 'Docker', field: 'Conteneurs' },
 ] as const
+
+// Intitulés et dates du profil LinkedIn public fourni par Clément.
+export const certifications: readonly Certification[] = [
+  {
+    code: 'AZ-204',
+    title: 'Azure Developer Associate',
+    issuer: 'Microsoft',
+    issued: 'mai 2026',
+    expires: 'mai 2027',
+  },
+  {
+    code: 'AZ-400',
+    title: 'Designing and Implementing Microsoft DevOps Solutions',
+    issuer: 'Microsoft',
+    issued: 'février 2026',
+    expires: 'février 2027',
+  },
+  {
+    code: 'AI-102',
+    title: 'Designing and Implementing a Microsoft Azure AI Solution',
+    issuer: 'Microsoft',
+    issued: 'décembre 2025',
+    expires: 'décembre 2026',
+  },
+]
 
 export const projects: readonly Project[] = [
   {

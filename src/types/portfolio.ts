@@ -31,6 +31,14 @@ export type Project = {
   note: string
 }
 
+export type Certification = {
+  code: string
+  title: string
+  issuer: string
+  issued: string
+  expires: string
+}
+
 export type StackGroup = {
   name: string
   technologies: readonly string[]
